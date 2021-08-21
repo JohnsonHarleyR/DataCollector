@@ -1,4 +1,4 @@
-﻿namespace DataCollector.Interfaces
+﻿namespace DataCollector.Data.Database.Interfaces
 {
     public interface IItem
     {

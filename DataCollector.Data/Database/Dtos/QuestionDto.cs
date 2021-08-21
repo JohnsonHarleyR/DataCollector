@@ -1,4 +1,6 @@
-﻿namespace DataCollector.Database.Dtos
+﻿using DataCollector.Data.Database.Interfaces;
+
+namespace DataCollector.Data.Database.Dtos
 {
     public class QuestionDto : IQuestion
     {

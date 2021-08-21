@@ -1,6 +1,6 @@
-﻿using DataCollector.Interfaces;
+﻿using DataCollector.Data.Database.Interfaces;
 
-namespace DataCollector.Database.Dtos
+namespace DataCollector.Data.Database.Dtos
 {
     public class AnswerDto : IAnswer
     {

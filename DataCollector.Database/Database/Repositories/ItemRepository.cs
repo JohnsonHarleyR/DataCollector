@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Dapper;
 
 namespace DataCollector.Database.Repositories
 {
@@ -8,7 +9,7 @@ namespace DataCollector.Database.Repositories
         private string Schema = @"[dbo]";
         private string ConnectionString;
 
-        public SetupRepository()
+        public ItemRepository()
         {
             ConnectionString = ConfigurationManager.ConnectionStrings["DataCollector"].ConnectionString;
         }

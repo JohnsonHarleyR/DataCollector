@@ -1,4 +1,4 @@
-﻿namespace DataCollector.Database.Dtos
+﻿namespace DataCollector.Data.Database.Interfaces
 {
     public interface IQuestion
     {

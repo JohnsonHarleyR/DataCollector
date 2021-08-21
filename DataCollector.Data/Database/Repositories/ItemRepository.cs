@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Dapper;
+using DataCollector.Data.Database.Dtos;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
-using Dapper;
 
 namespace DataCollector.Database.Repositories
 {
@@ -14,86 +17,79 @@ namespace DataCollector.Database.Repositories
             ConnectionString = ConfigurationManager.ConnectionStrings["DataCollector"].ConnectionString;
         }
 
-        public IEnumerable<GameSetupDto> GetAllSetups()
+        public IEnumerable<ItemDto> GetAllItems()
         {
-            IEnumerable<GameSetupDto> setups;
+            IEnumerable<ItemDto> items;
 
             using (var connection = new SqlConnection(ConnectionString))
             {
-                string sql = $"{Schema}.GetAllGameSetups";
+                string sql = $"{Schema}.GetAllItems";
 
-                setups = connection.Query<GameSetupDto>(sql, commandType: System.Data.CommandType.StoredProcedure);
+                items = connection.Query<ItemDto>(sql, commandType: System.Data.CommandType.StoredProcedure);
 
             }
-            return setups;
+            return items;
         }
 
-        public GameSetupDto GetSetupByGameCode(string gameCode)
+        public ItemDto GetItemById(int id)
         {
-            GameSetupDto setup;
+            ItemDto item;
 
             using (var connection = new SqlConnection(ConnectionString))
             {
                 string sql = $"{Schema}.GetSetupByGameCode";
 
-                setup = connection.Query<GameSetupDto>(sql,
-                    new { GameCode = gameCode },
+                item = connection.Query<ItemDto>(sql,
+                    new { Id = id },
                     commandType: System.Data.CommandType.StoredProcedure)?.FirstOrDefault();
 
             }
-            return setup;
+            return item;
         }
 
-        public void AddGameSetup(GameSetupDto setupDto)
+        public void AddItem(ItemDto itemDto)
         {
             using (var connection = new SqlConnection(ConnectionString))
             {
-                string sql = $"{Schema}.AddGameSetup";
+                string sql = $"{Schema}.AddItem";
 
                 connection.Execute(sql,
                                     new
                                     {
-                                        GameCode = setupDto.GameCode,
-                                        Players = setupDto.Players,
-                                        Watchers = setupDto.Watchers,
-                                        AllowAudience = setupDto.AllowAudience,
-                                        LeaveInDatabase = setupDto.LeaveInDatabase
+                                        Name = itemDto.Name
                                     },
                                     commandType: System.Data.CommandType.StoredProcedure);
 
             }
         }
 
-        public void UpdateGameSetup(GameSetupDto setupDto)
+        public void UpdateItem(ItemDto itemDto)
         {
             using (var connection = new SqlConnection(ConnectionString))
             {
-                string sql = $"{Schema}.UpdateGameSetup";
+                string sql = $"{Schema}.UpdateItem";
 
                 connection.Execute(sql,
                                     new
                                     {
-                                        GameCode = setupDto.GameCode,
-                                        Players = setupDto.Players,
-                                        Watchers = setupDto.Watchers,
-                                        AllowAudience = setupDto.AllowAudience,
-                                        LeaveInDatabase = setupDto.LeaveInDatabase
+                                        Id = itemDto.Id,
+                                        Name = itemDto.Name
                                     },
                                     commandType: System.Data.CommandType.StoredProcedure);
 
             }
         }
 
-        public void DeleteGameSetup(string gameCode)
+        public void DeleteItem(int id)
         {
             using (var connection = new SqlConnection(ConnectionString))
             {
-                string sql = $"{Schema}.DeleteGameSetup";
+                string sql = $"{Schema}.DeleteItem";
 
                 connection.Execute(sql,
                                     new
                                     {
-                                        GameCode = gameCode
+                                        Id = id
                                     },
                                     commandType: System.Data.CommandType.StoredProcedure);
 

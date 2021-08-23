@@ -1,4 +1,5 @@
 ﻿using DataCollector.Helpers;
+using DataCollector.Logic.Models;
 using DataCollector.Logic.Orchestrators;
 using DataCollector.Models;
 using System.Web.Mvc;
@@ -30,6 +31,19 @@ namespace DataCollector.Controllers
             }
 
             return RedirectToAction("Index", "Home");
+
+        }
+
+        public void AddAnswer(int itemId, int questionId, int answerId)
+        {
+            Answer newAnswer = new Answer()
+            {
+                ItemId = itemId,
+                QuestionId = questionId,
+                AnswerId = answerId
+            };
+
+            answerOrchestrator.AddAnswer(newAnswer);
 
         }
     }

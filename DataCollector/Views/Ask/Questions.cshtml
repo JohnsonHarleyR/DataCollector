@@ -21,8 +21,10 @@
 
     var itemName = '@Model.Item.Name';
     var itemId = parseInt(@Model.Item.Id);
-    var Questions = @Html.Raw(Json.Encode(Model.Questions));
+    var questions = @Html.Raw(Json.Encode(Model.Questions));
     var questionIndex = 0;
-    var question = Questions[0].QuestionString;
+    var question = questions[0].QuestionString;
 
 </script>
+
+<script src="~/Scripts/ask-questions.js"></script>

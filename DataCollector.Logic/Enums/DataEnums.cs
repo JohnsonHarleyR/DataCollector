@@ -4,7 +4,7 @@ namespace DataCollector.Logic.Enums
 {
     public enum PossibleAnswer
     {
-        Yes,
+        Yes = 1,
         No,
         [Display(Name = "Does not apply")]
         DoesNotApply

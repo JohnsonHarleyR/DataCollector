@@ -26,7 +26,10 @@ namespace DataCollector.Controllers
 
             itemOrchestrator.AddItem(item);
 
-            return RedirectToAction("Questions", "Ask");
+            // now grab the item so we can get the item id
+            Item repoItem = itemOrchestrator.GetItemByName(item.Name);
+
+            return RedirectToAction("Questions", "Ask", new { itemId = repoItem.Id });
         }
 
 

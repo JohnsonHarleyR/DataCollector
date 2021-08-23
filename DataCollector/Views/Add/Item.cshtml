@@ -1,0 +1,28 @@
+﻿@using DataCollector.Models
+@model AddItemViewModel
+
+
+<div id="mainDiv">
+
+    <h2>Add Item</h2>
+
+    <input id="itemInput" type="text" name="Name" placeholder="What item?" />
+    <br />
+    <button id="addItemBtn" class="btn button">Add Item</button>
+    <br />
+    <p id="errorMessage"></p>
+
+</div>
+
+
+
+@*<form method="POST" action="/Home/AddItem" id="addItemForm">
+        <input id="itemInput" type="text" name="Name" placeholder="What item?" /><br />
+        <button id="addItemBtn" class="btn button">Add Item</button><br />
+        <p id="errorMessage"></p>
+    </form>*@
+
+
+
+<script src="~/Scripts/add-item.js"></script>
+

@@ -1,30 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace DataCollector.Controllers
 {
     public class HomeController : Controller
     {
+
+
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
 
-            return View();
-        }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
+
+
+
+
+
+
+        //// Validation for input
+        //public JsonResult ItemExists(string itemName)
+        //{
+        //    bool result = true;
+        //    ItemOrchestrator orch = new ItemOrchestrator();
+
+        //    Item existingItem = orch.GetItemByName(itemName);
+
+        //    if (existingItem == null)
+        //    {
+        //        result = false;
+        //    }
+        //    return Json(result);
+
+        //    // return whether the item name already exists or not
+
+        //}
+
+
     }
 }

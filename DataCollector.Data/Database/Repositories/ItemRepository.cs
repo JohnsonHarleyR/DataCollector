@@ -37,10 +37,26 @@ namespace DataCollector.Database.Repositories
 
             using (var connection = new SqlConnection(ConnectionString))
             {
-                string sql = $"{Schema}.GetSetupByGameCode";
+                string sql = $"{Schema}.GetItemById";
 
                 item = connection.Query<ItemDto>(sql,
                     new { Id = id },
+                    commandType: System.Data.CommandType.StoredProcedure)?.FirstOrDefault();
+
+            }
+            return item;
+        }
+
+        public ItemDto GetItemByName(string name)
+        {
+            ItemDto item;
+
+            using (var connection = new SqlConnection(ConnectionString))
+            {
+                string sql = $"{Schema}.GetItemByName";
+
+                item = connection.Query<ItemDto>(sql,
+                    new { Name = name },
                     commandType: System.Data.CommandType.StoredProcedure)?.FirstOrDefault();
 
             }

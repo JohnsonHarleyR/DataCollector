@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace DataCollector.Logic.Orchestrators
 {
-    class ItemOrchestrator
+    public class ItemOrchestrator
     {
         private ItemRepository repo = new ItemRepository();
         public bool AddItem(Item item)
@@ -57,6 +57,22 @@ namespace DataCollector.Logic.Orchestrators
         public Item GetItemById(int id)
         {
             ItemDto itemDto = repo.GetItemById(id);
+
+            if (itemDto == null)
+            {
+                return null;
+            }
+
+            return new Item()
+            {
+                Id = itemDto.Id,
+                Name = itemDto.Name
+            };
+        }
+
+        public Item GetItemByName(string name)
+        {
+            ItemDto itemDto = repo.GetItemByName(name);
 
             if (itemDto == null)
             {

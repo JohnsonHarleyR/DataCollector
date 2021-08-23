@@ -1,6 +1,5 @@
 ﻿using DataCollector.Logic.Models;
 using DataCollector.Logic.Orchestrators;
-using DataCollector.Models;
 using System.Web.Mvc;
 
 namespace DataCollector.Controllers
@@ -12,9 +11,8 @@ namespace DataCollector.Controllers
 
         public ActionResult Item()
         {
-            AddItemViewModel model = new AddItemViewModel();
 
-            return View(model);
+            return View();
         }
 
         public ActionResult SubmitItem(string input)
@@ -30,11 +28,12 @@ namespace DataCollector.Controllers
             return RedirectToAction("Questions", "Ask");
         }
 
+
+
         public ActionResult Question()
         {
-            AddItemViewModel model = new AddItemViewModel();
 
-            return View(model);
+            return View();
         }
 
         public ActionResult SubmitQuestion(string input)

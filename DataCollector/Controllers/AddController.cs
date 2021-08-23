@@ -52,7 +52,7 @@ namespace DataCollector.Controllers
 
             questionOrchestrator.AddQueston(question);
 
-            return RedirectToAction("Items", "Ask");
+            return RedirectToAction("ItemsWithQuestions", "Ask");
         }
 
 

@@ -11,7 +11,7 @@
         // on return, increment the questions and put new question - unless it is out of questions, then redirect
         questionIndex++;
         if (questionIndex >= questions.length) {
-            window.location.href = "/Home/Index";
+            window.location.href = "/Ask/ItemsWithQuestions";
         } else {
             question = questions[questionIndex].QuestionString;
             questionText.innerHTML = question;

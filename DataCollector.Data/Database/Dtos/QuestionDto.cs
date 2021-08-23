@@ -6,7 +6,7 @@ namespace DataCollector.Data.Database.Dtos
     {
         public int Id { get; set; }
         public string Question { get; set; }
-        public int DependentQuestionId { get; set; }
-        public int DependentAnswerId { get; set; }
+        public int? DependentQuestionId { get; set; }
+        public int? DependentAnswerId { get; set; }
     }
 }

@@ -1,19 +1,20 @@
 ﻿
 @{
-    ViewBag.Title = "Question";
+    ViewBag.Title = "Add Question";
 }
-
-<h2>Question</h2>
 
 <div id="mainDiv">
 
-    <div class="add-question">
-        <input id="questionInput" type="text" name="Name" placeholder="What item?" />
-        <br />
+    <h2>Add Question</h2>
 
+    <div class="add-question">
+        <input id="questionInput" type="text" name="Name" placeholder="What question?" />
+        <br />
+        <input id="attachCheck" type="checkbox" />
+        Add dependent question?
     </div>
 
-    <div id="attachDependentDiv">
+    <div id="attachDiv" style="display: none;">
 
     </div>
 
@@ -22,8 +23,6 @@
         <br />
         <p id="errorMessage"></p>
     </div>
-
-    <h2>Add Question</h2>
 
 
 

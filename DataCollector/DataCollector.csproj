@@ -124,11 +124,16 @@
     <Compile Include="Controllers\AjaxController.cs" />
     <Compile Include="Controllers\AskController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\QuestionDto.cs" />
     <Compile Include="Enums\DataEnums.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\AnswerHelper.cs" />
+    <Compile Include="Models\AskQuestionsViewModel.cs" />
     <Compile Include="Models\Containers\ItemInput.cs" />
+    <Compile Include="Models\Containers\PossibleAnswerContainer.cs" />
+    <Compile Include="Models\Containers\QuestionsContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +147,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\add-item.js" />
     <Content Include="Scripts\add-question.js" />
+    <Content Include="Scripts\ask-questions.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="connectionstrings.config" />
@@ -172,6 +178,7 @@
     <Content Include="Views\Add\Item.cshtml" />
     <Content Include="Views\Ask\Questions.cshtml" />
     <Content Include="Views\Add\Question.cshtml" />
+    <Content Include="Views\Ask\Items.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

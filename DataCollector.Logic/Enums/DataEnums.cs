@@ -2,7 +2,7 @@
 
 namespace DataCollector.Logic.Enums
 {
-    public enum PossibleAnswers
+    public enum PossibleAnswer
     {
         Yes,
         No,

@@ -2,6 +2,10 @@
     window.location.href = "/Add/Item";
 }
 
+function goToAddQuestions() {
+    window.location.href = "/Add/Question";
+}
+
 
 
 // variables
@@ -11,3 +15,4 @@ var addAnswersBtn = document.getElementById('addAnswersBtn');
 
 // event handlers
 addItemBtn.addEventListener('click', goToAddItems);
+addQuestionBtn.addEventListener('click', goToAddQuestions);

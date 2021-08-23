@@ -14,8 +14,8 @@
 
 
 // variables
-var addItemBtn = document.getElementById('addItemBtn');
 var itemInput = document.getElementById('itemInput');
+var addItemBtn = document.getElementById('addItemBtn');
 var errorMessage = document.getElementById('errorMessage');
 
 // event handlers

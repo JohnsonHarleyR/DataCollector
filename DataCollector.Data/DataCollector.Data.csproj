@@ -47,11 +47,14 @@
   <ItemGroup>
     <Compile Include="Database\Dtos\AnswerDto.cs" />
     <Compile Include="Database\Dtos\ItemDto.cs" />
+    <Compile Include="Database\Dtos\PossibleAnswer.cs" />
     <Compile Include="Database\Dtos\QuestionDto.cs" />
     <Compile Include="Database\Interfaces\IAnswer.cs" />
     <Compile Include="Database\Interfaces\IItem.cs" />
     <Compile Include="Database\Interfaces\IQuestion.cs" />
+    <Compile Include="Database\Repositories\AnswerRepository.cs" />
     <Compile Include="Database\Repositories\ItemRepository.cs" />
+    <Compile Include="Database\Repositories\QuestionRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

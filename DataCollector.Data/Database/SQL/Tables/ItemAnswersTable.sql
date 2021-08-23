@@ -20,26 +20,6 @@ CREATE TABLE [dbo].[ItemAnswers](
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[ItemAnswers]  WITH CHECK ADD  CONSTRAINT [FK_ItemAnswers_Items] FOREIGN KEY([ItemId])
-REFERENCES [dbo].[Items] ([Id])
-GO
-
-ALTER TABLE [dbo].[ItemAnswers] CHECK CONSTRAINT [FK_ItemAnswers_Items]
-GO
-
-ALTER TABLE [dbo].[ItemAnswers]  WITH CHECK ADD  CONSTRAINT [FK_ItemAnswers_PossibleAnswers] FOREIGN KEY([AnswerId])
-REFERENCES [dbo].[PossibleAnswers] ([Id])
-GO
-
-ALTER TABLE [dbo].[ItemAnswers] CHECK CONSTRAINT [FK_ItemAnswers_PossibleAnswers]
-GO
-
-ALTER TABLE [dbo].[ItemAnswers]  WITH CHECK ADD  CONSTRAINT [FK_ItemAnswers_Questions] FOREIGN KEY([QuestionId])
-REFERENCES [dbo].[Questions] ([Id])
-GO
-
-ALTER TABLE [dbo].[ItemAnswers] CHECK CONSTRAINT [FK_ItemAnswers_Questions]
-GO
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Answers to questions that have been provided about different questions.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ItemAnswers'
 GO

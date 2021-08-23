@@ -43,8 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\DataEnums.cs" />
+    <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Question.cs" />
+    <Compile Include="Orchestrators\AnswerOrchestrator.cs" />
     <Compile Include="Orchestrators\ItemOrchestrator.cs" />
+    <Compile Include="Orchestrators\QuestionOrchestrator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,28 @@
-﻿
+﻿@using DataCollector.Models
+@model AskQuestionsViewModel
+
 @{
     ViewBag.Title = "AskQuestions";
 }
 
-<h2>AskQuestions</h2>
+<h2>Ask Questions for Item</h2>
 
+<div id="mainDiv">
+
+    <p><b>For Item: </b>@Model.ItemName</p>
+    <p id="questionText">@Model.Questions[0]</p>
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+    <button id="doesNotApplyBtn">Yes</button>
+
+</div>
+
+<script>
+
+    var itemName = @Model.ItemName;
+    var itemId = @Model.ItemId;
+    var Questions = @Html.Raw(Json.Encode(Model.Questions));
+    var questionIndex = 0;
+    var question = Questions[0];
+
+</script>

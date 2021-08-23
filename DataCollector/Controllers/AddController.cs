@@ -8,6 +8,7 @@ namespace DataCollector.Controllers
     {
 
         ItemOrchestrator itemOrchestrator = new ItemOrchestrator();
+        QuestionOrchestrator questionOrchestrator = new QuestionOrchestrator();
 
         public ActionResult Item()
         {
@@ -36,17 +37,19 @@ namespace DataCollector.Controllers
             return View();
         }
 
-        public ActionResult SubmitQuestion(string input)
+        public ActionResult SubmitQuestion(string input, int? dependentQuestionId, int? dependentAnswerId)
         {
             // Add item to the database
-            Item item = new Item()
+            Question question = new Question()
             {
-                Name = input.ToLower()
+                QuestionString = input,
+                DependentQuestionId = dependentQuestionId,
+                DependentAnswerId = dependentAnswerId
             };
 
-            itemOrchestrator.AddItem(item);
+            questionOrchestrator.AddQueston(question);
 
-            return RedirectToAction("Questions", "Ask");
+            return RedirectToAction("Items", "Ask");
         }
 
 

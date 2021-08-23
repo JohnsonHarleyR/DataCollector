@@ -5,8 +5,7 @@ namespace DataCollector.Models
 {
     public class AskQuestionsViewModel
     {
-        public string ItemName { get; set; }
-        public int ItemId { get; set; }
+        public Item Item { get; set; }
         public List<Question> Questions { get; set; }
     }
 }

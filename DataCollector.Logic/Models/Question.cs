@@ -1,6 +1,4 @@
-﻿using DataCollector.Logic.Enums;
-
-namespace DataCollector.Logic.Models
+﻿namespace DataCollector.Logic.Models
 {
     public class Question
     {
@@ -9,6 +7,5 @@ namespace DataCollector.Logic.Models
         public int? DependentQuestionId { get; set; }
         public Question DependentQuestion { get; set; }
         public int? DependentAnswerId { get; set; }
-        public PossibleAnswer? DependentAnswer { get; set; }
     }
 }

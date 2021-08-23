@@ -1,6 +1,5 @@
 ﻿using DataCollector.Data.Database.Dtos;
 using DataCollector.Data.Database.Repositories;
-using DataCollector.Logic.Enums;
 using DataCollector.Logic.Models;
 using System.Collections.Generic;
 
@@ -59,7 +58,6 @@ namespace DataCollector.Logic.Orchestrators
                     DependentQuestionId = question.DependentQuestionId,
                     DependentQuestion = dependentQuestion,
                     DependentAnswerId = question.DependentAnswerId,
-                    DependentAnswer = (PossibleAnswer?)question.DependentAnswerId
                 });
             }
 
@@ -91,7 +89,6 @@ namespace DataCollector.Logic.Orchestrators
                     DependentQuestionId = question.DependentQuestionId,
                     DependentQuestion = dependentQuestion,
                     DependentAnswerId = question.DependentAnswerId,
-                    DependentAnswer = (PossibleAnswer?)question.DependentAnswerId
                 });
             }
 
@@ -122,7 +119,6 @@ namespace DataCollector.Logic.Orchestrators
                 DependentQuestionId = questionDto.DependentQuestionId,
                 DependentQuestion = dependentQuestion,
                 DependentAnswerId = questionDto.DependentAnswerId,
-                DependentAnswer = (PossibleAnswer?)questionDto.DependentAnswerId
             };
         }
 

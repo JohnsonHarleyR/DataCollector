@@ -5,12 +5,12 @@
     ViewBag.Title = "AskQuestions";
 }
 
-<h2>Ask Questions for Item</h2>
+<h2>Answer Questions</h2>
 
 <div id="mainDiv">
 
-    <p><b>For Item: </b>@Model.ItemName</p>
-    <p id="questionText">@Model.Questions[0]</p>
+    <p><b>Item: </b>@Model.Item.Name</p>
+    <p><b>Question: </b><span id="questionText">@Model.Questions[0].QuestionString</span></p>
     <button id="yesBtn">Yes</button>
     <button id="noBtn">No</button>
     <button id="doesNotApplyBtn">Yes</button>
@@ -19,10 +19,10 @@
 
 <script>
 
-    var itemName = @Model.ItemName;
-    var itemId = @Model.ItemId;
+    var itemName = '@Model.Item.Name';
+    var itemId = parseInt(@Model.Item.Id);
     var Questions = @Html.Raw(Json.Encode(Model.Questions));
     var questionIndex = 0;
-    var question = Questions[0];
+    var question = Questions[0].QuestionString;
 
 </script>

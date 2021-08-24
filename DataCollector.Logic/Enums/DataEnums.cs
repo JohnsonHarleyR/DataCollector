@@ -6,6 +6,7 @@ namespace DataCollector.Logic.Enums
     {
         Yes = 1,
         No,
+        Sometimes,
         [Display(Name = "Does not apply")]
         DoesNotApply
     }

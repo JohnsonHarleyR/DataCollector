@@ -1,4 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using DataCollector.Helpers;
+using FeatureVectors.Classes;
+using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace DataCollector.Controllers
 {
@@ -8,6 +11,8 @@ namespace DataCollector.Controllers
 
         public ActionResult Index()
         {
+            List<FeatureVector> vectors = VectorHelper.GenerateVectors();
+
             return View();
         }
 

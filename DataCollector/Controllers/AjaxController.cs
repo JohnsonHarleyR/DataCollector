@@ -1,4 +1,4 @@
-﻿using DataCollector.Enums;
+﻿using DataCollector.Logic.Enums;
 using DataCollector.Logic.Models;
 using DataCollector.Logic.Orchestrators;
 using DataCollector.Models.Containers;
@@ -35,17 +35,22 @@ namespace DataCollector.Controllers
             answers.Add(new PossibleAnswerContainer()
             {
                 Answer = "Yes",
-                AnswerId = (int)PossibleAnswers.Yes
+                AnswerId = (int)PossibleAnswer.Yes
             });
             answers.Add(new PossibleAnswerContainer()
             {
                 Answer = "No",
-                AnswerId = (int)PossibleAnswers.No
+                AnswerId = (int)PossibleAnswer.No
+            });
+            answers.Add(new PossibleAnswerContainer()
+            {
+                Answer = "Sometimes",
+                AnswerId = (int)PossibleAnswer.Sometimes
             });
             answers.Add(new PossibleAnswerContainer()
             {
                 Answer = "Does not apply",
-                AnswerId = (int)PossibleAnswers.DoesNotApply
+                AnswerId = (int)PossibleAnswer.DoesNotApply
             });
 
             if (showAll)

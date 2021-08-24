@@ -125,11 +125,11 @@
     <Compile Include="Controllers\AskController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QuestionDto.cs" />
-    <Compile Include="Enums\DataEnums.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\AnswerHelper.cs" />
+    <Compile Include="Helpers\VectorHelper.cs" />
     <Compile Include="Models\AskQuestionsViewModel.cs" />
     <Compile Include="Models\Containers\ItemInput.cs" />
     <Compile Include="Models\Containers\PossibleAnswerContainer.cs" />
@@ -202,6 +202,10 @@
     <ProjectReference Include="..\DataCollector.Logic\DataCollector.Logic.csproj">
       <Project>{457785b6-c678-492f-bee3-157d4f23729d}</Project>
       <Name>DataCollector.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FeatureVectors\FeatureVectors.csproj">
+      <Project>{a2cf47be-8576-4045-a1be-a10092611965}</Project>
+      <Name>FeatureVectors</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

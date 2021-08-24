@@ -27,9 +27,11 @@ var questionText = document.getElementById('questionText');
 
 var yesBtn = document.getElementById('yesBtn');
 var noBtn = document.getElementById('noBtn');
+var sometimesBtn = document.getElementById('sometimesBtn');
 var doesNotApplyBtn = document.getElementById('doesNotApplyBtn');
 
 // event handlers
 yesBtn.addEventListener('click', function () { answerQuestion(1) });
 noBtn.addEventListener('click', function () { answerQuestion(2) });
-doesNotApplyBtn.addEventListener('click', function () { answerQuestion(3) });
+sometimesBtn.addEventListener('click', function () { answerQuestion(3) });
+doesNotApplyBtn.addEventListener('click', function () { answerQuestion(4) });

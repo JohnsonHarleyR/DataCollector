@@ -66,5 +66,27 @@ namespace DataCollector.Controllers
             answerOrchestrator.AddAnswer(newAnswer);
 
         }
+
+        //public string AddAnswer(int itemId, int questionId, int answerId)
+        //{
+        //    Answer newAnswer = new Answer()
+        //    {
+        //        ItemId = itemId,
+        //        QuestionId = questionId,
+        //        AnswerId = answerId
+        //    };
+
+        //    answerOrchestrator.AddAnswer(newAnswer);
+
+        //    // auto answer irrelevent questions
+        //    AnswerHelper.AutoAnswerIrrelevant(newAnswer);
+
+        //    // now grab unanswered again and return them so they can be updated
+        //    List<Question> newQuestions = AnswerHelper.GetUnansweredQuestions((int)itemId);
+
+        //    // return a serialized version
+        //    return JsonConvert.SerializeObject(newQuestions);
+        //}
+
     }
 }

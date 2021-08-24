@@ -59,6 +59,10 @@
       <Project>{8af3b250-5eb9-411d-982c-fb78e3706c13}</Project>
       <Name>DataCollector.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FeatureVectors\FeatureVectors.csproj">
+      <Project>{a2cf47be-8576-4045-a1be-a10092611965}</Project>
+      <Name>FeatureVectors</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

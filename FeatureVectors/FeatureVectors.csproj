@@ -62,22 +62,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\FeatureVector.cs" />
-    <Compile Include="Classes\VectorPosition.cs" />
+    <Compile Include="Classes\Vector.cs" />
+    <Compile Include="Classes\Feature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Py\Interfaces\IPythonEngine.cs" />
     <Compile Include="Py\PythonEngine.cs" />
     <Compile Include="Py\ScriptSources.cs" />
+    <Compile Include="SupportVectorMachine.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Py\Scripts\SVM.py" />
     <Content Include="Py\Scripts\TestCalculator.py" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bower.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Classes\Interfaces\" />
+    <Folder Include="Py\Imports\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

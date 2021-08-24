@@ -11,7 +11,7 @@ namespace DataCollector.Controllers
 
         public ActionResult Index()
         {
-            List<FeatureVector> vectors = VectorHelper.GenerateVectors();
+            List<Vector> vectors = VectorHelper.GenerateVectors();
 
             return View();
         }

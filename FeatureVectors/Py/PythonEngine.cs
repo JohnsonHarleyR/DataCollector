@@ -19,6 +19,7 @@ namespace FeatureVectors.Py
 
             // create instance of the engine
             engine = Python.CreateEngine();
+            Python.ImportModule(scope, "numpy");
 
             // create scope
             scope = engine.CreateScope();
